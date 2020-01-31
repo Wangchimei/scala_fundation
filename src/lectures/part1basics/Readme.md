@@ -23,7 +23,7 @@ x += 1
     - Int, Long, Short, Float, Double
     - String, Character
 
-#### Basic expression
+#### Basic: expression
 ```
 val x = 3 + 5
 val xIsEven = x % 2 == 0
@@ -50,3 +50,5 @@ val xIsOdd = !xIsEven
     - instructions (like Java, Python)
         - instructions are executed
         - an instruction means do something
+        
+#### Basic: functions

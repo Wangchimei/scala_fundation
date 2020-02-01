@@ -52,14 +52,15 @@ val xIsOdd = !xIsEven
         - an instruction means do something
         
 #### Basic: functions
-  def _functionName_(_parameter): _intenedReturnType_ = {  
-    println("test")  
+  def _functionName_(_parameter_): _intendedReturnType_ = {  
+        println("test")  
   }
   
-  Function can also return unit type (execute side effects)  
-  We normally need functions with side effects if we want something that has nothing to do with computation. e.g. printing sth to the console, displaying sth on screen, writing to a file...
+  Function can also return **unit type**, which executes side effects.
+  We normally need functions with side effects if we want something that has nothing to do with computation.  
+  E.g. printing sth to the console, displaying sth on screen, writing to a file...
   
-  When you need loops, use recursive function instead.
+  When you need loops, use recursive function instead. (tail recursive)  
   Any function can be turned into a tail recursive function.  
   The trick is to use an "accumulator" to store intermediate results rather than call the function recursively.
 

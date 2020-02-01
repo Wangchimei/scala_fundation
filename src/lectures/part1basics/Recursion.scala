@@ -18,7 +18,7 @@ object Recursion extends App {
     @tailrec
     def factHelper(x: Int, accumulator: BigInt): BigInt =
       if (x <= 1) accumulator
-      else factHelper(x - 1, x * accumulator) //tail recursive ; use recursive call as the last expression
+      else factHelper(x - 1, x * accumulator) //tail recursive : use recursive call as the last expression
 
     factHelper(n, 1)
   }

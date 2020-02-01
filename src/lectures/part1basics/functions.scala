@@ -30,6 +30,3 @@ object functions extends App {
   println(aBigFunction(10))
 }
 
-
-//Parameter name:type
-//return a string

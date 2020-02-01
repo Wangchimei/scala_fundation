@@ -1,13 +1,13 @@
-## Basic
+# Basic
 Functional programming involves working less with variables
 
-#### Value
+### Value
 immutable: cannot be reassigned
 ```
 val x: Int = 2
 ```
 
-#### Variables
+### Variables
 mutable: can be reassigned
 ```
 var x: Int = 1
@@ -23,7 +23,7 @@ x += 1
     - Int, Long, Short, Float, Double
     - String, Character
 
-#### Basic: expression
+### Basic: expression
 ```
 val x = 3 + 5
 val xIsEven = x % 2 == 0
@@ -51,7 +51,7 @@ val xIsOdd = !xIsEven
         - instructions are executed
         - an instruction means do something
         
-#### Basic: functions
+### Basic: functions
   def _functionName_(_parameter_): _intendedReturnType_ = {  
         println("test")  
   }
@@ -67,3 +67,21 @@ val xIsOdd = !xIsEven
   - Tail Recursive:  
     - Use recursive call as the last expression.
     - Allow Scala to preserve the same stack frame and not use additional stack frames for recursive
+    
+  #### Call by Value vs Call by Name
+  - Call by Value
+  ```
+  def calledByValue(x: Long): Unit = {
+    println("by value: " + x)
+  }
+  ```
+    - Value is computed before call
+    - Same value used everywhere
+  - Call by Name
+  ```
+  def calledByValue(x: => Long): Unit = {
+    println("by value: " + x)
+  }
+  ```
+    - expression is passed literally
+    - expression is evaluated at every use within 

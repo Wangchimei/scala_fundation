@@ -111,7 +111,7 @@ val xIsOdd = !xIsEven
     - expression is evaluated at every use within 
     
 ## String
-#### specific for Scala
+#### Specific for Scala
 ```
   val str = "Hello"
   val aNumberString = "45"
@@ -123,7 +123,7 @@ val xIsOdd = !xIsEven
 ```
 
 #### String interpolators
-`s"..."` `f"..."` `raw"..."` interpolated formatted string
+`s"..."` `f"..."` `raw"..."` interpolated formatted string  
 `$name` `$age` will expand value based on the _value name_
 
 - S-interpolators

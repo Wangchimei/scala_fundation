@@ -70,6 +70,23 @@ val xIsOdd = !xIsEven
     - Use recursive call as the last expression.
     - Allow Scala to preserve the same stack frame and not use additional stack frames for recursive
     
+  When 99% of time we call a function with the same params...  
+  the parameter can be set with a default value, and omitted when call
+  ```
+    def factorial(x: Int, acc: Int = 1): Int = {
+      ...
+    }
+  ```
+   However, since the leading default arguments cannot be omitted, we **name the parameters**.
+   ```
+    def greet(name: String = "Shiba", age: Int = 3): String =
+      s"Hi, I am $name and I am $age years old."
+    
+    greet(age = 5)
+    greet(name = "Sully", age = 5)
+    greet(age = 5, name = "Doggy")
+   ```
+
   #### Call by Value vs Call by Name
   - Call by Value
   

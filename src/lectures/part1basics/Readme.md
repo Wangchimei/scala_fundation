@@ -1,13 +1,13 @@
 # Basic
 Functional programming involves working less with variables
 
-### Value
+## Value
 immutable: cannot be reassigned
 ```
 val x: Int = 2
 ```
 
-### Variables
+##Variables
 mutable: can be reassigned
 ```
 var x: Int = 1
@@ -23,7 +23,7 @@ x += 1
     - Int, Long, Short, Float, Double
     - String, Character
 
-### Expression
+## Expression
 ```
 val x = 3 + 5
 val xIsEven = x % 2 == 0
@@ -51,7 +51,7 @@ val xIsOdd = !xIsEven
         - instructions are executed
         - an instruction means do something
         
-### Functions
+## Functions
   ```
       def functionName(parameter): intendedReturnType = {  
         println("test")  
@@ -80,7 +80,7 @@ val xIsOdd = !xIsEven
    However, since the leading default arguments cannot be omitted, we **name the parameters**.
    ```
     def greet(name: String = "Shiba", age: Int = 3): String =
-      "Hi, I am $name and I am $age years old."
+      s"Hi, I am $name and I am $age years old."
     
     greet(age = 5)
     greet(name = "Sully", age = 5)
@@ -109,3 +109,40 @@ val xIsOdd = !xIsEven
 
     - expression is passed literally
     - expression is evaluated at every use within 
+    
+## String
+#### specific for Scala
+```
+  val str = "Hello"
+  val aNumberString = "45"
+  val aNumber = aNumberString.toInt
+  //prepend (+:) and append (:+)
+  println('a' +: aNumberString :+ 'z') //a45z
+  println(str.reverse)
+  println(str.take(2)) //He
+```
+
+#### String interpolators
+`s"..."` `f"..."` `raw"..."` interpolated formatted string
+`$name` `$age` will expand value based on the _value name_
+
+- S-interpolators
+    ```
+      val greeting = s"Hello, my name is $name and I am $age years old."
+      val greeting2 = s"Hello, my name is $name and I will be turning ${age + 1} years old."
+    ```
+
+- F-interpolators
+    ```
+      val speed = 1.2f
+      val myth = f"$name can eat $speed%2.2f burgers per minute."
+    ```
+    `%2.2f`: two characters total, minimum & 2 decimal precision 
+
+- Raw-interpolators
+    This ignores escape characters, but injected variables DO get escape.
+    ```
+      println(raw"This is a \n newline")  // not escape
+      val str = "This is a \n newline"
+      println(raw"$str")                  // escape
+    ```

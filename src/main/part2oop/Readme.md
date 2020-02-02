@@ -29,12 +29,20 @@
  
  - Overloading  
   It means defining methods with the same name but different signature (different numbers of params, parameters of different type)
-  ```
-  def greet(name: String): Unit = {...}
-  def greet(): Unit = {...}
-  ```
+    ```
+    def greet(name: String): Unit = {...}
+    def greet(): Unit = {...}
+    ```
 
  - The keyword `this`
- A method with parameters, when using `$name` is actually refer to parameter, use `$this.name` to access variables at class level.
- A method without parameters, `$name` is the same as `$this.name`, which is at class level.
+ A method with parameters, when using `$name` is actually refer to parameter, use `$this.name` to access variables at class level.(*1)
+ A method without parameters, `$name` is the same as `$this.name`, which is at class level.(*2)
+    ```
+    val person = new Person("Thor",24)
+    
+    class Person(name: String, val age: Int) {
+      def greet(name: String): Unit = println(s"$name is not the same as ${this.name}") //*1
+      def greet(): Unit = println(s"$name is the same as ${this.name}") //*2
+    }
+    ```
  

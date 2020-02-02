@@ -73,6 +73,7 @@
 
 #### Prefix Notation
   `val x = -1` is equivalent to `val x = 1.unary_-`
+  This is only allowed for `+` `-` `~` `!`
   ```
   class Person(val name: String, favoriteMovie: String){
     def unary_! : String = s"$name!!!!!!!!!!!!!"
@@ -94,7 +95,7 @@
   println(mary.isAlive)
   println(mary isAlive)
   ```
- #### Apply()
+ #### SPECIAL: Apply()
   `apply` defines with no parameter can be executed with `object()`
   ```
   class Person(val name: String, favoriteMovie: String){
